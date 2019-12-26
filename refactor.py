@@ -3,9 +3,9 @@ import time
 import numbers
 
 WIN_WIDTH = 800
-WIN_WIDTH = 600
+WIN_HIEGHT = 600
 
-screen = pygame.display.set_mode(WIN_WIDTH, WIN_HEIGHT)
+screen = pygame.display.set_mode((WIN_WIDTH, WIN_HIEGHT))
 
 # Removed this code because it's all in the wrong place
 # pygame.display.flip()
@@ -23,11 +23,11 @@ screen = pygame.display.set_mode(WIN_WIDTH, WIN_HEIGHT)
 pygame.display.set_caption('Flappy Rambo')
 background_color = (255, 255, 255)
 screen.fill(background_color)
-screen.display.flip()
+pygame.display.flip()
 
 running = True
 while running:
-    for event inp ygame.event.get():
+    for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
 # In your old code the loop stayed here, and would only exit by closing the window
